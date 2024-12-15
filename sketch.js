@@ -66,8 +66,8 @@ function classifyVideo() {
 function gotResult(error, results) {
   // If there is an error
   if (error) {
-    console.error(results);
-    console.error(error);
+    console.log(results);
+    console.log(error);
     return;
   }
   // The results are in an array ordered by confidence.
