@@ -59,7 +59,7 @@ function draw() {
 // Get a prediction for the current video frame
 function classifyVideo() {
   // flippedVideo = p5.image(video, 0, 0, p5.width, p5.height);
-  classifier.classify(video, gotResult);
+  classifier.classify(video, 2, gotResult);
 }
 
 // When we get a result
