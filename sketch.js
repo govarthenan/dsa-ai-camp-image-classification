@@ -66,6 +66,7 @@ function classifyVideo() {
 function gotResult(error, results) {
   // If there is an error
   if (error) {
+    console.error(results);
     console.error(error);
     return;
   }
