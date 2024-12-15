@@ -39,7 +39,7 @@ function setup() {
   video.size(canvasSize, canvasSize * (3 / 4));
   video.hide();
 
-  flippedVideo = p5.image(video, 0, 0, p5.width, p5.height);
+  // flippedVideo = p5.image(video, 0, 0, p5.width, p5.height);
   // Start classifying
   classifyVideo();
 }
@@ -47,7 +47,7 @@ function setup() {
 function draw() {
   background(0);
   // Draw the video
-  image(flippedVideo, 0, 0);
+  image(video, 0, 0);
 
   // Draw the label
   fill(255);
@@ -58,8 +58,8 @@ function draw() {
 
 // Get a prediction for the current video frame
 function classifyVideo() {
-  flippedVideo = p5.image(video, 0, 0, p5.width, p5.height);
-  classifier.classify(flippedVideo, gotResult);
+  // flippedVideo = p5.image(video, 0, 0, p5.width, p5.height);
+  classifier.classify(video, gotResult);
 }
 
 // When we get a result
